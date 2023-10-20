@@ -9,7 +9,7 @@ contract basicStorage {
     mapping ( uint256 => string) public speedToname;
 
 
-    // struct used to create new object
+    // struct used to create new type
     struct Cars {
         string name;
         uint256 speed;
