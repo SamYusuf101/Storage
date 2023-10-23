@@ -145,11 +145,11 @@
 	},
 	"sources": {
 		"contracts/CreditMe.sol": {
-			"keccak256": "0x714c2186c8931a561a5278e87133b59127d17628bf21e741569e2367796636d1",
+			"keccak256": "0xb8bb98adb890a15c70518318daa5bb67ee4a0b0fd2154d576f6b8677a65f97cc",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c3f2c96cc5f17c6d81d5db81c808bd3ea31ee8dc5e221113d7edc9bfc6868d16",
-				"dweb:/ipfs/QmSpqcUbRnKo4n4dn3nvfT1JAaGBpBFnm477VEGesZYJg2"
+				"bzz-raw://1e6836cbfc44954e21dd04a9db657effabb82dce1eafbec3c96d833d1631e7d3",
+				"dweb:/ipfs/QmYMDow9YEA3yYsxN3c6y2BWdHyEDUFmtrV1RHYTSLfrQj"
 			]
 		}
 	},
