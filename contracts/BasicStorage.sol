@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.8;
 
-contract basicStorage {
+contract BasicStorage {
     uint256 public bestNumber; //  sets default bestNumber to 0
     Cars[] public car;
     
@@ -15,7 +15,7 @@ contract basicStorage {
         uint256 speed;
     }
 
-    function store(uint256 _bestNumber) public {
+    function store(uint256 _bestNumber) public virtual {
         bestNumber = _bestNumber;
     }
 
@@ -24,7 +24,7 @@ contract basicStorage {
         return bestNumber;
     }
 
-    // function to add cars dynamically
+    // dynamic function to add cars
     function AddCars(string memory _name, uint256 _speed) public {
         car.push(Cars(_name, _speed));
         nameTospeed[_name] = _speed;
