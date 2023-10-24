@@ -16,6 +16,7 @@ contract Storagebag {
     basicStorageArray[_basicStorageIndex].store(_basicStorageNumber);
 
   }
+  
 
 function sfGet (uint256 _basicStorageIndex) public view returns(uint256) {
   return basicStorageArray[_basicStorageIndex].retrieve();

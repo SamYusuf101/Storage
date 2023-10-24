@@ -51,51 +51,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "ethAmount",
-						"type": "uint256"
-					}
-				],
-				"name": "getConvertion",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getPrice",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getVersion",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "minimumUsd",
 				"outputs": [
@@ -106,6 +61,13 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -145,11 +107,19 @@
 			]
 		},
 		"contracts/CreditMe.sol": {
-			"keccak256": "0xea87748f63c25c0f7f55dbbcfe256301c037a2dcf73a589839eb8e5958fefad3",
+			"keccak256": "0x5468aee0299219b251e72830a53e51ee766463b4a5805ef4ecc5246e33d3aee7",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://37642942842b2187d91c2fe0bbe3d8202b36143d8610e82693041caa8b4e1060",
-				"dweb:/ipfs/QmVtj9cuiTECVr4F3LwwdfMTWXRFx6qMN4imv9tKrma1g2"
+				"bzz-raw://917d465079879cb0733e7c845aff234b74726eb1dba56b1135804ae834b1ac43",
+				"dweb:/ipfs/QmcCPfQevxgY2HoFJhfhDR96LA9YghSzEpeWExdwXu3aUw"
+			]
+		},
+		"contracts/PriceConverter.sol": {
+			"keccak256": "0xc63e8dbb2ccb62411b5cf9bc28a73ba021f12880eaf8f667e511124ca53530c8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://90d14a85cf2c9b03648356dcb501d046c4070aee2739b1927c8bb62d403d9704",
+				"dweb:/ipfs/QmZxL42bRJtzHbgiSoh8TNxzpxF38ufWrzKL2ks5orzcSU"
 			]
 		}
 	},

@@ -105,11 +105,11 @@
 			]
 		},
 		"contracts/StorageBag.sol": {
-			"keccak256": "0x84f7e6aaef4446b9e9aee41360ce16683b67135cc4252779999f292c8e08e513",
+			"keccak256": "0x2d7b90217feaa92db5a9edd9a2d00a8fbe7cdca9b14085f4271a63139653d55d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9148a1cc8c2cebc381c4502463f7eb712edde3994b55cd4d05e2446051aad69a",
-				"dweb:/ipfs/QmaPAck9VK7etTu97fUHQMCnwKKypv8gWTUy3dxKbRp5wY"
+				"bzz-raw://340be17163f665bc78ea43aba0a869695cf5e753789229eeeed0813208942ad9",
+				"dweb:/ipfs/QmdopE46E51UdLLsqcRyxcciNW9mJg4PH93TmRvBpqvSrR"
 			]
 		}
 	},

@@ -1,38 +1,43 @@
 // SPDX-License-Identifier: MIT
+
 pragma solidity ^0.8.8;
+import "./PriceConverter.sol";
+
 import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
+
 
 contract CreditMe {
 
+  using PriceConverter for uint256;
   uint256 public minimumUsd = 50;
   address[] public funders;
   mapping (address => uint256) public amountToNumber;
 
   function FundMe() public payable {
-    require(getConvertion(msg.value) >= minimumUsd, "Not Enough");
+    require(msg.value.getConvertion() >= minimumUsd, "Not Enough");
     funders.push(msg.sender);
-    //mappin sender to value sent
-    amountToNumber[msg.sender] = msg.value;
+    //mapping sender to value sent
+    amountToNumber[msg.sender] += msg.value;
 
   }
 
-  function getPrice () public view returns(uint256){
-    AggregatorV3Interface priceFeed = AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306);
-    (,int256 price,,,) = priceFeed.latestRoundData();
-    // convert eth in terms of usd
-    return uint256(price * 10e18);
-
+ function withdraw()public {
+  for(uint256 funderIndex; funderIndex<funders.length; funderIndex++){
+    address funder = funders[funderIndex];
+    amountToNumber[funder] = 0;
   }
 
-  function getVersion () public view returns(uint256) {
-    AggregatorV3Interface priceFeed = AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306);
-    return priceFeed.version();
+  funders = new address[](0);
+  //transfer
+  payable(msg.sender).transfer(address(this).balance);
+  //send
+  bool success = payable(msg.sender).send(address(this).balance);
+  require(success, "failed");
+  //call
+  (bool Sendsuccess,) =payable(msg.sender).call{value: address(this).balance}("");
+  require(Sendsuccess, "failed");
 
-  }
+ }
+ }
 
-  function getConvertion(uint256 ethAmount) public view returns(uint256) {
-    uint256 ethPrice = getPrice();
-    uint256 ethAmountInUsd = (ethPrice * ethAmount) / 1e18;
-    return ethAmountInUsd;
-  }
-}
+  

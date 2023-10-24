@@ -8,67 +8,12 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_speed",
-						"type": "uint256"
-					}
-				],
-				"name": "AddCars",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "bestNumber",
-				"outputs": [
-					{
-						"internalType": "uint256",
+						"internalType": "address",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "car",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "name",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "speed",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"name": "nameTospeed",
+				"name": "addressToFunders",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -81,47 +26,73 @@
 			},
 			{
 				"inputs": [],
-				"name": "retrieve",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "speedToname",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_bestNumber",
-						"type": "uint256"
-					}
-				],
-				"name": "store",
+				"name": "fundMe",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "funders",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVersion",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "ethAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "priceConverter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -138,7 +109,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SecondStorage.sol": "SecondStorage"
+			"contracts/Test.sol": "Test"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -152,20 +123,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/BasicStorage.sol": {
-			"keccak256": "0x80f440436109948aa034d8008af1f9c4c0ebd7a62a7b4ddc9ccb1b78db110ed8",
+		"@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0xfe4e8bb4861bb3860ba890ab91a3b818ec66e5a8f544fb608cfcb73f433472cd",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://14bf07e07afa27c59d853b9901edc11661972f88d1e684ecc6b1c5da386bce2e",
-				"dweb:/ipfs/QmeFcPmpkswj3SFcVcEMWbkiyTnwd1Z281sqxiBJW6mb6Q"
+				"bzz-raw://644cff84052e1e82b5bb502b2a46e8f142a62b0db4cd9b38200798ba8373c6f7",
+				"dweb:/ipfs/QmTa99QHrJBn3SXDizquPBUiTxVCNKQrHgaWJhuds5Sce2"
 			]
 		},
-		"contracts/SecondStorage.sol": {
-			"keccak256": "0x1cddbcb52530b96d15a3884ed035efda393f3f7183aabdaecf350357ab560df5",
+		"contracts/Test.sol": {
+			"keccak256": "0x6524ae17ff9e2b094ed8a68172e46e9f06466843cee4c5007aad9f8727b42d6e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ca6f15143d6987bae59bbc9fd8b95914cc440e3f8e7a248d4cc6ddeeb06129d6",
-				"dweb:/ipfs/QmconupM7FFcgZwUmKiC2uE5pYQfRMJx3vjR4wHm1R7UjW"
+				"bzz-raw://3d64035454dc8d29a2869b37c1cde660884ed2cf78c9c1467df07d2ba11c01f0",
+				"dweb:/ipfs/QmbhAgxXJjeroAhX36ftz62pPiXARYxLuMkryUxusPxfTD"
 			]
 		}
 	},
